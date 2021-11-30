@@ -1,0 +1,1 @@
+console.log("Hello %s %s %d", "Spion", "Atom", 100);

@@ -25,8 +25,7 @@ var numbers = lines.map(Number);
 
 // Part 1
 var increases = 0;
-for (var i = 1; i < numbers.length; i++) {
-    console.log("%d  %d  %s", numbers[i - 1], numbers[i], numbers[i] > numbers[i - 1]);
+for (var i = 1; i < numbers.length; i++) {    
     if (numbers[i] > numbers[i - 1])    
     {
         increases++;

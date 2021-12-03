@@ -1,24 +1,7 @@
-// input
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    var array;
-    rawFile.open("GET", file, false);    
-    rawFile.onreadystatechange = function ()    
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                array = allText.split('\n');                
-            }
-        }
-    }
-    rawFile.send(null);
-    return array;    
-}
+// *** Day 03 ***
+// https://adventofcode.com/2021/day/3
 
+// input
 var lines = readTextFile("input.txt");
 var inputLength = 12
 
@@ -32,8 +15,8 @@ var inputLength = 12
     }
 
     //binary string to number
-    var gammaNumber = parseInt( gamma.split('').join(''), 2 );
-    var epsilonNumber = parseInt( epsilon.split('').join(''), 2 );
+    var gammaNumber = parseInt( gamma, 2 );
+    var epsilonNumber = parseInt( epsilon, 2 );
 
     console.log("Part 1:")
     console.log("Gamma: %s, Epsilon: %s", gamma, epsilon);
@@ -56,16 +39,12 @@ for (var p = 0; p < inputLength; p++) {
     }
 }
 //binary string to number
-var oxygenNumber = parseInt( oxygenList[0].split('').join(''), 2 );
-var CO2Number = parseInt( CO2List[0].split('').join(''), 2 );            
-
+var oxygenNumber = parseInt( oxygenList[0], 2 );
+var CO2Number = parseInt( CO2List[0], 2 );            
 
 console.log("Part 1:")
 console.log("Oxygen: %d, CO2: %d", oxygenNumber, CO2Number);
 console.log("Solution: %d",  oxygenNumber * CO2Number);
-
-
-
 
 function getMostCommenBit(arr, pos) {
     

@@ -1,24 +1,7 @@
-// input
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    var array;
-    rawFile.open("GET", file, false);    
-    rawFile.onreadystatechange = function ()    
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                array = allText.split('\n');                
-            }
-        }
-    }
-    rawFile.send(null);
-    return array;    
-}
+// *** Day 02 ***
+// https://adventofcode.com/2021/day/2
 
+// input
 var lines = readTextFile("input.txt");
 
 // Part 1

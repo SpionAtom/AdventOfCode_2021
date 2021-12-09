@@ -5,7 +5,6 @@
 var input = readTextFile("input.txt");
 var lowpoint = new Array()
 
-
 // Part 1
 var risk = 0
 for (var row = 0; row < input.length; row++) {

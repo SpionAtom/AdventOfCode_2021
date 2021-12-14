@@ -25,6 +25,28 @@ function setCharAt(str,index,chr) {
     return str.substring(0,index) + chr + str.substring(index+1);
 }
 
+// https://stackoverflow.com/questions/4364881/inserting-string-at-position-x-of-another-string/4364902
+function insertString(str, ins, position) {
+    var output = [str.slice(0, position), ins, str.slice(position)].join('');
+    return output
+}
+
+https://www.programiz.com/javascript/examples/reverse-string
+function reverseString(str) {
+
+    // return a new array of strings
+    const arrayStrings = str.split("");
+   
+    // reverse the new created array elements
+    const reverseArray = arrayStrings.reverse();
+ 
+    // join all elements of the array into a string
+    const joinArray = reverseArray.join("");
+    
+    // return the reversed string
+    return joinArray;
+}
+
 function create2DArray(height, width, prefill) {
     var arr = new Array(height)
     for (var h = 0; h < height; h++) {

@@ -10,8 +10,7 @@ var height = input.length, width = input[0].length
 // Part 1
 var grid = create2DArray(height, width, null)
 for (var y = 0; y < height; y++) {
-    for (var x = 0; x < width; x++) {
-        //grid[y][x] = {y: y, x: x, risk: Number(input[y].charAt(x)), visited: false, dist: Number.MAX_VALUE, prev: null}
+    for (var x = 0; x < width; x++) {        
         grid[y][x] = Number(input[y].charAt(x))
     }
 }
